@@ -16,13 +16,11 @@ requirements:
   host:
     - python
     - setuptools
-    - unittest2
     - findspark
     - pytest
     - pip
   run:
     - python
-    - unittest2
     - findspark
     - pytest
 
