@@ -1,17 +1,11 @@
-{% set name = "spark-testing-base" %}
 {% set version = "0.10.0" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "748b880499636dfc2889ba4dc9359f656c479fc5a7ce3f487b2f9ff2b1473a25" %}
-
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: spark-testing-base
+  version: {{ version }}
 
 source:
-  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  '{{ hash_type }}': '{{ hash_value }}'
+  url: https://pypi.io/packages/source/s/spark-testing-base/spark-testing-base-{{ version }}.tar.gz
+  sha256: 748b880499636dfc2889ba4dc9359f656c479fc5a7ce3f487b2f9ff2b1473a25
 
 build:
   noarch: python
