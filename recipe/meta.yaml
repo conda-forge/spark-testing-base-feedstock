@@ -1,17 +1,11 @@
-{% set name = "spark-testing-base" %}
-{% set version = "0.10.0" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "748b880499636dfc2889ba4dc9359f656c479fc5a7ce3f487b2f9ff2b1473a25" %}
-
+{% set version = "1.4.3" %}
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: spark-testing-base
+  version: {{ version }}
 
 source:
-  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  '{{ hash_type }}': '{{ hash_value }}'
+  url: https://github.com/holdenk/spark-testing-base/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: c1effe58439cec5db6679ed4c1ef71967c7ff8865eae5cac9a8d952c0785820d
 
 build:
   noarch: python
@@ -20,15 +14,13 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - setuptools
-    - unittest2
     - findspark
     - pytest
     - pip
   run:
-    - python
-    - unittest2
+    - python >=3.7
     - findspark
     - pytest
 
@@ -51,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - dbast
+    - h-vetinari
