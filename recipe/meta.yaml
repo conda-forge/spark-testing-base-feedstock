@@ -1,11 +1,11 @@
-{% set version = "0.10.0" %}
+{% set version = "1.4.3" %}
 package:
   name: spark-testing-base
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/spark-testing-base/spark-testing-base-{{ version }}.tar.gz
-  sha256: 748b880499636dfc2889ba4dc9359f656c479fc5a7ce3f487b2f9ff2b1473a25
+  url: https://github.com/holdenk/spark-testing-base/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: c1effe58439cec5db6679ed4c1ef71967c7ff8865eae5cac9a8d952c0785820d
 
 build:
   noarch: python
