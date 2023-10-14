@@ -17,15 +17,13 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.8
     - setuptools
-    - unittest2
     - findspark
     - pytest
     - pip
   run:
-    - python
-    - unittest2
+    - python >=3.8
     - findspark
     - pytest
 
